@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lieferclone</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script2.js"></script>
+    <link rel="icon" type="image/png" href="./img/delivery.png" />
+  </head>
+  <body onload="includeHTML(); render(); renderBasket(); ">
+    <header>
+      <img src="./img/delivery.png" alt="" />
+      <span>Speisekarte</span>
+      <div class="burgerMenu">
+        <div class="burgerLine"></div>
+        <div class="burgerLine"></div>
+        <div class="burgerLine"></div>
+      </div>
+    </header>
+    <section class="headerImage"><img src="./img/pizza2.jpg" alt="" /></section>
+    <img class="overHeaderImage" src="./img/delivery.png" alt="" />
+
+    <section class="restaurant">
+      <div class="info">
+        <h1>Domino</h1>
+        <div>
+          <img onclick="infoWindow()" id="infoImage" src="./img/info.png" alt="" />
+          <img src="./img/favorite.png" alt="" />
+        </div>
+      </div>
+      <div class="stars">
+        <img src="./img/star2.png" alt="" />
+        <img src="./img/star2.png" alt="" />
+        <img src="./img/star2.png" alt="" />
+        <img src="./img/star2.png" alt="" />
+        <img src="./img/star2.png" alt="" />
+        <span
+          ><p><b>5</b> (2000+)</p></span
+        >
+      </div>
+    </section>
+
+    <section class="slider" id="slider">
+      <!-- Slider mit Gerichten -->
+      <div class="sliderDish" id="sliderDish">
+        <a href="#doner">Döner</a>
+        <a href="#pizza">Pizza</a>
+        <a href="#drink">Getränke</a>
+      </div>
+    </section>
+
+    <section class="dishBackground">
+      <!-- Gerichte -->
+      <div class="headimage">
+        <img src="./img/donerhead.jpg" alt="" id="doner" />
+      </div>
+      <h1>Döner</h1>
+      <div class="eatBlock" id="dishDoener">
+        <!-- <div class="dish"></div> -->
+      </div>
+
+      <div class="headimage">
+        <img src="./img/pizza6.jpg" alt="" id="pizza" />
+      </div>
+      <h1>Pizza</h1>
+      <div class="eatBlock" id="dishPizza">
+        <!-- <div class="dish"></div> -->
+      </div>
+
+      <div class="headimage">
+        <img src="./img/lemonade.jpg" alt="" id="drink" />
+      </div>
+      <h1>Getränke</h1>
+      <div class="eatBlock" id="dishDrink">
+        <!-- <div class="dish"></div> -->
+      </div>
+    </section>
+
+    <section id="marketBasket" class="marketBasket">
+      <!-- Warenkorb -->
+      <h2>Warenkorb</h2>
+      <div id="amountDoener"></div>
+      <div id="amountPizza"></div>
+      <div id="amountDrink"></div>
+      <div class="line"></div>
+      <div class="result" id="result"></div>
+      <div class="line" id="line"></div>
+      <div>
+        <button class="order" id="orderButton" onclick="order()">Jetzt Bestellen</button>
+      </div>
+    </section>
+    <section>
+    <div class="greyBackground d-none" id="greyBackground" onclick="hideBackground()">
+      <div class="popup">
+        <h3>Über dieses Geschäft</h3>
+        <div class="card"><span>Hier könnte ihr Standort zu sehen sein</span></div>
+        <div class="openingHours"><img src="./img/clock.png" alt="" />Öffnungszeiten</div>
+        <div class="openingHoursField">
+          <div class="daysAndTimes">
+            <div>Montag</div>
+            <div>11:00 - 03:00</div>
+          </div>
+          <div class="daysAndTimes">
+            <div>Dienstag</div>
+            <div>11:00 - 03:00</div>
+          </div>
+          <div class="daysAndTimes">
+            <div>Mittwoch</div>
+            <div>11:00 - 03:00</div>
+          </div>
+          <div class="daysAndTimes">
+            <div>Donerstag</div>
+            <div>11:00 - 03:00</div>
+          </div>
+          <div class="daysAndTimes">
+            <div>Freitag</div>
+            <div>11:00 - 05:00</div>
+          </div>
+          <div class="daysAndTimes">
+            <div>Samstag</div>
+            <div>11:00 - 05:00</div>
+          </div>
+          <div class="daysAndTimes">
+            <div>Sonntag</div>
+            <div>11:00 - 03:00</div>
+          </div>
+        </div>
+        <div class="details"><img src="./img/checkbook.png" alt="" />Gebühren</div>
+        <div class="detailsField">
+          <div class="daysAndTimes">
+            <div>Mindestbestellwert</div>
+            <div>0,00 €</div>
+          </div>
+          <div class="daysAndTimes">
+            <div>Lieferkosten</div>
+            <div>0,00 €</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="productInfo"></div>
+  </section>
+    <button onclick="showBasketResponsive()" id="showBasketResponsive" class="orderResponsive">Warenkorb</button>
+    <button onclick="showDishResponsive()" id="showDishResponsive" class="showDishResponsive">Zurück</button>
+  </body>
+</html>
